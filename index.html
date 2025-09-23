@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WB Assessoria Migratória - Soluções completas em imigração, naturalização, vistos e residência no Brasil. Mais de 10 anos de experiência.">
+    <meta name="keywords" content="imigração, naturalização, vistos, residência, CELPE-Bras, assessoria migratória, São Paulo">
+    <meta name="author" content="WB Assessoria Migratória">
+    <meta name="robots" content="index, follow">
+    
+    <title>WB Assessoria Migratória - Soluções Completas em Imigração</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Leaflet CSS para Mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h2><i class="fas fa-globe-americas"></i> WB Assessoria Migratória</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Soluções Migratórias Completas para Você</h1>
+                <p>Especialistas em imigração ajudando pessoas a realizar seus sonhos no Brasil. Atendimento personalizado e resultados garantidos.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre os serviços da WB Assessoria Migratória" 
+                       class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
+                    </a>
+                    <a href="#servicos" class="btn-secondary">Conheça Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/img1.png" 
+                     alt="Equipe de assessoria migratória trabalhando com documentos e passaportes" 
+                     class="hero-main-image"
+                     loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Oferecemos soluções completas para todos os tipos de necessidades migratórias</p>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Naturalização Brasileira</h3>
+                    <p>Ajuda completa no processo de naturalização brasileira, desde a documentação inicial até a aprovação final no Ministério da Justiça.</p>
+                    <div class="servico-features">
+                        <span><i class="fas fa-check"></i> Documentação completa</span>
+                        <span><i class="fas fa-check"></i> Acompanhamento jurídico</span>
+                        <span><i class="fas fa-check"></i> Taxa de sucesso 98%</span>
+                    </div>
+                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre Naturalização Brasileira" 
+                       class="saiba-mais" target="_blank" rel="noopener noreferrer">
+                        Saiba Mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Vistos e Imigração</h3>
+                    <p>Assessoria especializada para obtenção de todos os tipos de vistos para o Brasil e exterior, incluindo trabalho, estudo e investimento.</p>
+                    <div class="servico-features">
+                        <span><i class="fas fa-check"></i> Visto de trabalho</span>
+                        <span><i class="fas fa-check"></i> Visto de estudante</span>
+                        <span><i class="fas fa-check"></i> Visto de investimento</span>
+                    </div>
+                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre Vistos" 
+                       class="saiba-mais" target="_blank" rel="noopener noreferrer">
+                        Saiba Mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Curso de Proficiência em Lingua Portuguesa</h3>
+                    <p>Preparação completa para o CELPE-Bras e outros exames de proficiência em português. Aulas práticas e material exclusivo.</p>
+                    <div class="servico-features">
+                        <span><i class="fas fa-check"></i> Taxa de aprovação 95%</span>
+                        <span><i class="fas fa-check"></i> Aulas online e presenciais</span>
+                        <span><i class="fas fa-check"></i> Material didático incluso</span>
+                    </div>
+                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre o Curso de Proficiência em Lingua Portuguesa" 
+                       class="saiba-mais" target="_blank" rel="noopener noreferrer">
+                        Saiba Mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residência no Brasil</h3>
+                    <p>Processos completos de residência temporária e permanente no Brasil, incluindo reagrupamento familiar e residência por trabalho.</p>
+                    <div class="servico-features">
+                        <span><i class="fas fa-check"></i> Residência temporária</span>
+                        <span><i class="fas fa-check"></i> Residência permanente</span>
+                        <span><i class="fas fa-check"></i> Reagrupamento familiar</span>
+                    </div>
+                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre Residência no Brasil" 
+                       class="saiba-mais" target="_blank" rel="noopener noreferrer">
+                        Saiba Mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Traduções Juramentadas</h3>
+                    <p>Traduções juramentadas e técnicas para todos os documentos necessários em processos migratórios. Tradutores credenciados.</p>
+                    <div class="servico-features">
+                        <span><i class="fas fa-check"></i> Tradutores credenciados</span>
+                        <span><i class="fas fa-check"></i> Entrega rápida</span>
+                        <span><i class="fas fa-check"></i> Mais de 20 idiomas</span>
+                    </div>
+                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre Traduções Juramentadas" 
+                       class="saiba-mais" target="_blank" rel="noopener noreferrer">
+                        Saiba Mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Por que Escolher a WB Assessoria?</h2>
+                    <p>Somos especialistas em soluções migratórias no Brasil, com mais de 10 anos de experiência consolidada no mercado. Nossa equipe é formada por advogados, consultores e professores especializados que acompanham cada cliente desde a primeira consulta até a conclusão bem-sucedida do processo.</p>
+                    <p>Com uma taxa de sucesso superior a 95%, já ajudamos milhares de pessoas a realizar seus sonhos de viver, trabalhar e estudar no Brasil. Nossa missão é tornar o processo migratório simples, transparente e acessível para todos.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Anos de Experiência</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>95%</h3>
+                            <p>Taxa de Sucesso</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5000+</h3>
+                            <p>Clientes Atendidos</p>
+                        </div>
+                    </div>
+                    <a href="#contato" class="btn-primary">Agende sua Consulta Gratuita</a>
+                </div>
+                <div class="sobre-image">
+                    <img src="img/img2.jpg" 
+                         alt="Equipe da WB Assessoria Migratória em atendimento" 
+                         class="sobre-main-image"
+                         loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+            <p class="section-subtitle">Depoimentos de quem já realizou o sonho de viver no Brasil conosco</p>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="depoimento-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Foto de Maria Silva" 
+                             class="depoimento-foto">
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"A WB me ajudou em todo meu processo de naturalização! Desde o primeiro contato, senti confiança na equipe. Tudo foi explicado de forma clara e o acompanhamento foi impecável. Em apenas 8 meses consegui minha cidadania brasileira!"</p>
+                    <div class="cliente-info">
+                        <strong>Maria Silva</strong>
+                        <span>🇵🇹 Naturalização Brasileira - 2024</span>
+                    </div>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="depoimento-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Foto de John Anderson" 
+                             class="depoimento-foto">
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Excelente atendimento e resultado! Consegui meu visto de trabalho em tempo recorde. A equipe da WB foi extremamente profissional e me manteve informado em todas as etapas. Recomendo a todos que precisam de assessoria migratória confiável."</p>
+                    <div class="cliente-info">
+                        <strong>John Anderson</strong>
+                        <span>🇺🇸 Visto de Trabalho - 2023</span>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Chamada para Ação -->
+    <section class="chamada-acao">
+        <div class="container">
+            <div class="chamada-content">
+                <h2>Quer Regularizar Sua Situação no Brasil?</h2>
+                <p>Não perca mais tempo com burocracia! Nossa equipe está pronta para ajudá-lo em todo o processo migratório, desde a primeira consulta até a aprovação final.</p>
+                <div class="chamada-buttons">
+                    <a href="https://wa.me/5511914258886?text=Olá! Quero agendar uma consulta gratuita com a WB Assessoria" 
+                       class="btn-whatsapp grande" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Agende sua Consulta Gratuita
+                    </a>
+                    <a href="#contato" class="btn-secondary grande">Fale Conosco Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Estamos aqui para ajudar você a realizar seu sonho brasileiro</p>
+            
+            <div class="contato-content">
+                <div class="formulario">
+                    <h3>Envie sua Mensagem</h3>
+                    <p class="form-subtitle">Preencha o formulário e nossa equipe entrará em contato em até 24 horas</p>
+                    <form id="contato-form" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo" required>
+                            <span class="input-icon"><i class="fas fa-user"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                            <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Seu WhatsApp (11) 99999-9999" required>
+                            <span class="input-icon"><i class="fab fa-whatsapp"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone (opcional)">
+                            <span class="input-icon"><i class="fas fa-phone"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <select id="servico" name="servico" required>
+                                <option value="">Selecione o Serviço de Interesse</option>
+                                <option value="naturalizacao">Naturalização Brasileira</option>
+                                <option value="vistos">Vistos e Imigração</option>
+                                <option value="residencia">Autorização de Residência</option>
+                                <option value="celpe-bras">Curso de Proficiência em Lingua Portuguesa</option>
+                                <option value="traducao">Traduções Juramentadas</option>
+                                <option value="outros">Outro Serviço</option>
+                            </select>
+                            <span class="input-icon"><i class="fas fa-list"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensagem" name="mensagem" placeholder="Descreva sua necessidade ou dúvida (mínimo 10 caracteres)" rows="5" required></textarea>
+                            <span class="input-icon"><i class="fas fa-comment"></i></span>
+                            <span class="char-counter" id="charCounter">0/500 caracteres</span>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contato-info">
+                    <h3>Informações de Contato</h3>
+                    <p class="info-subtitle">Entre em contato pelos canais abaixo. Respondemos em até 24 horas úteis.</p>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Nosso Endereço</h4>
+                            <p>Av. Amador Bueno da Veiga, 1970<br>
+                               2º Andar - Sala 19<br>
+                               Penha de França<br>
+                               São Paulo - SP, 03636-100</p>
+                            <a href="https://www.google.com/maps/place/WB+Assessoria+Migrat%C3%B3ria/@-23.5220357,-46.5294647,17z/data=!3m2!4b1!5s0x94ce5e3ad7db0529:0xc38aa49161e4a010!4m6!3m5!1s0x94ce5fb51d533ab1:0x64452d508ce3f536!8m2!3d-23.5220406!4d-46.5268898!16s%2Fg%2F11vpfrpmyf?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D" 
+                               class="info-link" target="_blank">
+                                <i class="fas fa-directions"></i> Como Chegar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/5511914258886" class="phone-link" target="_blank" rel="noopener noreferrer">
+                                (11) 91425-8886</a></p>
+                            <p class="info-details">Atendimento de Segunda a Sexta<br>8h às 18h</p>
+                            <a href="https://wa.me/5511914258886?text=Olá! Tenho uma dúvida sobre imigração" 
+                               class="info-link" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Iniciar Chat
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>E-mail Corporativo</h4>
+                            <p><a href="mailto:contato@wbassessoria.com.br" class="email-link">contato@wbassessoria.com.br</a></p>
+                            <p class="info-details">Resposta em até 24h úteis<br>Para consultas formais</p>
+                        </div>
+                    </div>
+
+                    <div class="redes-sociais">
+                        <h4>Siga-nos nas Redes Sociais</h4>
+                        <p class="social-subtitle">Acompanhe dicas e novidades sobre imigração</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=61550919162789" 
+                               class="social-link facebook" 
+                               title="Facebook - WB Assessoria Migratória"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="Facebook WB Assessoria">
+                                <i class="fab fa-facebook-f"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/wb.assessoria_/" 
+                               class="social-link instagram" 
+                               title="Instagram - @wb.assessoria_"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="Instagram WB Assessoria">
+                                <i class="fab fa-instagram"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa Interativo -->
+            <div class="mapa-container">
+                <h3 class="map-title">
+                    <i class="fas fa-map-marked-alt"></i> Nossa Localização em São Paulo
+                </h3>
+                <div id="mapa" class="mapa"></div>
+                <p class="map-info">Estamos localizados na Penha de França, região estratégica de São Paulo com fácil acesso por metrô e avenidas principais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-globe-americas"></i> WB Assessoria Migratória</h3>
+                    <p>Soluções completas em imigração, naturalização e regularização no Brasil.</p>
+                    <div class="footer-address">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Amador Bueno da Veiga, 1970<br>
+                           2º Andar - Sala 19, Penha de França<br>
+                           São Paulo - SP, 03636-100</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços Rápidos</h4>
+                    <ul>
+                        <li><a href="#servicos"><i class="fas fa-passport"></i> Naturalização</a></li>
+                        <li><a href="#servicos"><i class="fas fa-plane"></i> Vistos</a></li>
+                        <li><a href="#servicos"><i class="fas fa-home"></i> Residência</a></li>
+                        <li><a href="#servicos"><i class="fas fa-language"></i> Curso de Proficiência em Lingua Portuguesa</a></li>
+                        <li><a href="#servicos"><i class="fas fa-file-alt"></i> Traduções</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato Direto</h4>
+                    <div class="footer-contact">
+                        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5511914258886" target="_blank">(11) 91425-8886</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contato@wbassessoria.com.br">contato@wbassessoria.com.br</a></p>
+                        <p><i class="fas fa-clock"></i> Segunda a Sexta: 8h às 18h</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61550919162789" class="social-link facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/wb.assessoria_/" class="social-link instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 WB Assessoria Migratória. Todos os direitos reservados. | 
+                   <a href="https://www.linkedin.com/in/gustavo-costa-oliveira-4473b620a/" style="color: var(--text-dark);" target="_blank">Desenvolvido por Gustavo Costa Oliveira</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5511914258886?text=Olá! Gostaria de mais informações sobre a WB Assessoria Migratória" 
+           target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            <span class="pulse"></span>
+            <span class="whatsapp-tooltip">Chat WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Leaflet JavaScript para o Mapa -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    
+    <!-- JavaScript Principal -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
