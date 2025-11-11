@@ -75,7 +75,6 @@ function initMap() {
                            border: 2px solid rgba(212, 175, 55, 0.3); 
                            box-shadow: 0 10px 35px rgba(0,0,0,0.4); position: relative; overflow: hidden;">
                     
-                    <!-- Decoração superior -->
                     <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #D4AF37, #F1C40F, #D4AF37);"></div>
                     
                     <h3 style="color: #D4AF37; margin: 0 0 1.2rem 0; 
@@ -128,7 +127,6 @@ function initMap() {
                         </a>
                     </div>
                     
-                    <!-- Decoração inferior -->
                     <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; 
                                background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);"></div>
                 </div>
@@ -167,7 +165,7 @@ function initMap() {
             
             const closeButton = document.querySelector('.custom-popup .leaflet-popup-close-button');
             if (closeButton) {
-                closeButton.innerHTML = '&times;';
+                closeButton.innerHTML = '×';
                 closeButton.style.color = '#D4AF37';
                 closeButton.style.fontSize = '1.3rem';
                 closeButton.style.fontWeight = 'bold';
@@ -273,62 +271,60 @@ function initializeMobileMenu() {
         console.warn('Elementos do menu mobile não encontrados');
         return;
     }
-    
-    // Toggle menu
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-        
-        // Prevenir scroll quando menu aberto
-        if (navMenu.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-        
-        // Efeito sonoro sutil (opcional)
-        if (navMenu.classList.contains('active')) {
-            console.log('🍔 Menu mobile aberto');
-        }
-    });
-    
-    // Fechar menu ao clicar fora
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.navbar') && navMenu.classList.contains('active')) {
+
+    const toggleMenu = (event) => {
+        // A linha abaixo é a mais importante. Ela impede que este clique
+        // seja detectado por qualquer outra função na página.
+        if (event) event.stopPropagation();
+
+        const isActive = navMenu.classList.contains('active');
+
+        if (isActive) {
+            // Se já está ativo, fecha o menu
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
             document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
             console.log('🍔 Menu mobile fechado');
+        } else {
+            // Se não está ativo, abre o menu
+            hamburger.classList.add('active');
+            navMenu.classList.add('active');
+            document.body.classList.add('menu-open');
+            document.body.style.overflow = 'hidden';
+            console.log('🍔 Menu mobile aberto');
         }
-    });
-    
-    // Fechar menu ao clicar em links
+    };
+
+    // 1. Evento de clique APENAS no ícone de hambúrguer
+    hamburger.addEventListener('click', toggleMenu);
+
+    // 2. Evento para fechar ao clicar em um link do menu
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             if (navMenu.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.classList.remove('menu-open');
-                document.body.style.overflow = '';
+                // Chama a função sem evento para garantir que feche
+                toggleMenu(); 
             }
         });
     });
-    
-    // Tecla ESC para fechar menu
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-            document.body.style.overflow = '';
-            hamburger.focus();
+
+    // 3. Evento para fechar ao clicar FORA do menu
+    document.addEventListener('click', (e) => {
+        // Só fecha se o menu estiver ativo E o clique não for no menu ou no ícone
+        if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            toggleMenu();
         }
     });
-    
-    console.log('🍔 Menu mobile inicializado');
+
+    // 4. Evento para fechar com a tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    console.log('🍔 Menu mobile inicializado com a correção final.');
 }
 
 // === SMOOTH SCROLL E NAVEGAÇÃO ATIVA ===
@@ -1140,8 +1136,8 @@ function initializeVisualEffects() {
         });
     });
     
-    // Efeito de digitação no hero (mantido)
-    initializeTypewriterEffect();
+    // Efeito de digitação no hero (REMOVIDO POR SOLICITAÇÃO)
+    // initializeTypewriterEffect();
     
     // Parallax sutil no hero (mantido)
     initializeParallaxEffect();
@@ -1350,7 +1346,7 @@ function showNotification(message, type = 'info') {
                 <div style="font-size: 0.9rem;">${displayMessage}</div>
             </div>
             <button class="close-btn" aria-label="Fechar notificação" style="background: none; border: none; color: inherit; font-size: 1.1rem; cursor: pointer; padding: 0.25rem; margin-left: auto; opacity: 0.7; transition: opacity 0.2s;">
-                &times;
+                ×
             </button>
         </div>
     `;

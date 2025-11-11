@@ -10,29 +10,26 @@
     
     <title>WB Assessoria Migratória - Soluções Completas em Imigração</title>
     
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Leaflet CSS para Mapa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
           crossorigin=""/>
     
-    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <h2><i class="fas fa-globe-americas"></i> WB Assessoria Migratória</h2>
+                <a href="#home" class="logo-link">
+                    <img src="img/logo_wb.jpeg" alt="Logo WB Assessoria Migratória" class="logo-img">
+                    <span class="logo-text">WB Assessoria Migratória</span>
+                    </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
@@ -48,12 +45,12 @@
         </nav>
     </header>
 
-    <!-- Banner Principal -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Soluções Migratórias Completas para Você</h1>
-                <p>Especialistas em imigração ajudando pessoas a realizar seus sonhos no Brasil. Atendimento personalizado e resultados garantidos.</p>
+                <h1>Soluções Migratórias Completas</h1>
+                <p>A Welcome2Brazil oferece assessoria personalizada em imigração e naturalização, acompanhando cada etapa do processo para que viver legalmente no Brasil seja simples, seguro e sem complicações.
+                Com experiência, comprometimento e transparência, garantimos um atendimento próximo e eficaz, tornando sua chegada ao Brasil mais tranquila e seus objetivos, realidade.</p>
                 <div class="hero-buttons">
                     <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre os serviços da WB Assessoria Migratória" 
                        class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
@@ -71,7 +68,6 @@
         </div>
     </section>
 
-    <!-- Seção Serviços -->
     <section id="servicos" class="servicos">
         <div class="container">
             <h2 class="section-title">Nossos Serviços</h2>
@@ -82,11 +78,12 @@
                         <i class="fas fa-passport"></i>
                     </div>
                     <h3>Naturalização Brasileira</h3>
-                    <p>Ajuda completa no processo de naturalização brasileira, desde a documentação inicial até a aprovação final no Ministério da Justiça.</p>
+                    <p>A Welcome2Brazil acompanha todo o processo de naturalização brasileira, desde a organização dos documentos até a finalização junto ao Ministério da Justiça.
+                    Oferecemos suporte jurídico e acompanhamento individual em cada etapa.</p>
                     <div class="servico-features">
-                        <span><i class="fas fa-check"></i> Documentação completa</span>
-                        <span><i class="fas fa-check"></i> Acompanhamento jurídico</span>
-                        <span><i class="fas fa-check"></i> Taxa de sucesso 98%</span>
+                        <span><i class="fas fa-check"></i> Orientação completa em documentação</span>
+                        <span><i class="fas fa-check"></i> Acompanhamento jurídico personalizado</span>
+                        <span><i class="fas fa-check"></i> Apoio até a conclusão do processo</span>
                     </div>
                     <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre Naturalização Brasileira" 
                        class="saiba-mais" target="_blank" rel="noopener noreferrer">
@@ -99,11 +96,11 @@
                         <i class="fas fa-plane"></i>
                     </div>
                     <h3>Vistos e Imigração</h3>
-                    <p>Assessoria especializada para obtenção de todos os tipos de vistos para o Brasil e exterior, incluindo trabalho, estudo e investimento.</p>
+                    <p>Assessoria completa para solicitação de vistos no exterior, com atenção aos detalhes e suporte em todas as etapas do processo.</p>
                     <div class="servico-features">
-                        <span><i class="fas fa-check"></i> Visto de trabalho</span>
-                        <span><i class="fas fa-check"></i> Visto de estudante</span>
-                        <span><i class="fas fa-check"></i> Visto de investimento</span>
+                        <span><i class="fas fa-check"></i> Visto de procura de trabalho (Portugal)</span>
+                        <span><i class="fas fa-check"></i> Visto americano de turismo</span>
+                        <span><i class="fas fa-check"></i> Visto canadense de turismo</span>
                     </div>
                     <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre Vistos" 
                        class="saiba-mais" target="_blank" rel="noopener noreferrer">
@@ -115,14 +112,16 @@
                     <div class="servico-icon">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h3>Curso de Proficiência em Lingua Portuguesa</h3>
-                    <p>Preparação completa para o CELPE-Bras e outros exames de proficiência em português. Aulas práticas e material exclusivo.</p>
+                    <h3>Curso de Proficiência em Língua Portuguesa para Estrangeiros</h3>
+                    <p>Programa destinado a estrangeiros que desejam comprovar seu conhecimento em língua portuguesa, aprimorar a comunicação e facilitar sua integração acadêmica, profissional e social no Brasil.</p>
                     <div class="servico-features">
-                        <span><i class="fas fa-check"></i> Taxa de aprovação 95%</span>
-                        <span><i class="fas fa-check"></i> Aulas online e presenciais</span>
+                        <span><i class="fas fa-check"></i>Parceria com faculdade reconhecida</span>
+                        <span><i class="fas fa-check"></i> Aulas online, com flexibilidade de horários</span>
+                        <span><i class="fas fa-check"></i> Prova presencial obrigatória</span>
                         <span><i class="fas fa-check"></i> Material didático incluso</span>
                     </div>
-                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre o Curso de Proficiência em Lingua Portuguesa" 
+                    <p>Este curso é um dos passos primordiais para o processo de naturalização brasileira, conforme estabelece o Art. 12, inciso II, alínea “b”, da Constituição Federal, e regulamentado pela Lei nº 13.445/2017 (Lei de Migração) e pelo Decreto nº 9.199/2017.</p>
+                    <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre o Curso de Lingua Portuguesa" 
                        class="saiba-mais" target="_blank" rel="noopener noreferrer">
                         Saiba Mais <i class="fas fa-arrow-right"></i>
                     </a>
@@ -133,7 +132,8 @@
                         <i class="fas fa-home"></i>
                     </div>
                     <h3>Residência no Brasil</h3>
-                    <p>Processos completos de residência temporária e permanente no Brasil, incluindo reagrupamento familiar e residência por trabalho.</p>
+                    <p>A Welcome2Brazil realiza todo o processo de residência temporária e permanente no Brasil, garantindo segurança jurídica e administrativa em cada etapa.
+                    Também auxiliamos casos de reagrupamento familiar.</p>
                     <div class="servico-features">
                         <span><i class="fas fa-check"></i> Residência temporária</span>
                         <span><i class="fas fa-check"></i> Residência permanente</span>
@@ -150,11 +150,11 @@
                         <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>Traduções Juramentadas</h3>
-                    <p>Traduções juramentadas e técnicas para todos os documentos necessários em processos migratórios. Tradutores credenciados.</p>
+                    <p>Serviço oferecido em parceria com tradutores públicos credenciados, voltado exclusivamente a processos migratórios, com total segurança jurídica e administrativa.</p>
                     <div class="servico-features">
-                        <span><i class="fas fa-check"></i> Tradutores credenciados</span>
+                        <span><i class="fas fa-check"></i> Parceria com tradutores juramentados</span>
                         <span><i class="fas fa-check"></i> Entrega rápida</span>
-                        <span><i class="fas fa-check"></i> Mais de 20 idiomas</span>
+                        <span><i class="fas fa-check"></i> Mais de 20 idiomas disponíveis</span>
                     </div>
                     <a href="https://wa.me/5511914258886?text=Olá! Gostaria de saber mais sobre Traduções Juramentadas" 
                        class="saiba-mais" target="_blank" rel="noopener noreferrer">
@@ -165,32 +165,31 @@
         </div>
     </section>
 
-    <!-- Seção Sobre -->
     <section id="sobre" class="sobre">
         <div class="container">
             <div class="sobre-content">
                 <div class="sobre-text">
                     <h2>Por que Escolher a WB Assessoria?</h2>
-                    <p>Somos especialistas em soluções migratórias no Brasil, com mais de 10 anos de experiência consolidada no mercado. Nossa equipe é formada por advogados, consultores e professores especializados que acompanham cada cliente desde a primeira consulta até a conclusão bem-sucedida do processo.</p>
-                    <p>Com uma taxa de sucesso superior a 95%, já ajudamos milhares de pessoas a realizar seus sonhos de viver, trabalhar e estudar no Brasil. Nossa missão é tornar o processo migratório simples, transparente e acessível para todos.</p>
+                    <p>A WB Assessoria oferece soluções completas em processos migratórios no Brasil, com 3 anos de atuação consolidada. Nossa equipe acompanha cada cliente desde a primeira consulta até a conclusão do processo, sempre com base na Lei nº 13.445/2017, Decreto nº 9.199/2017 e Portaria nº 623/2017, garantindo total conformidade legal.</p>
+                    <p>Atendemos um número limitado de clientes por ano, garantindo eficiência, atenção personalizada e máxima dedicação em cada processo.</p>
                     <div class="stats">
                         <div class="stat-item">
-                            <h3>10+</h3>
-                            <p>Anos de Experiência</p>
+                            <h3>3</h3>
+                            <p>Anos de atuação</p>
                         </div>
                         <div class="stat-item">
-                            <h3>95%</h3>
-                            <p>Taxa de Sucesso</p>
+                            <h3>✓</h3>
+                            <p>Processos conduzidos em conformidade com a legislação migratória vigente</p>
                         </div>
                         <div class="stat-item">
-                            <h3>5000+</h3>
+                            <h3>500</h3>
                             <p>Clientes Atendidos</p>
                         </div>
                     </div>
                     <a href="#contato" class="btn-primary">Agende sua Consulta Gratuita</a>
                 </div>
                 <div class="sobre-image">
-                    <img src="img/img2.jpg" 
+                    <img src="img/2.jpeg" 
                          alt="Equipe da WB Assessoria Migratória em atendimento" 
                          class="sobre-main-image"
                          loading="lazy">
@@ -199,7 +198,6 @@
         </div>
     </section>
 
-    <!-- Seção Depoimentos -->
     <section class="depoimentos">
         <div class="container">
             <h2 class="section-title">O que Nossos Clientes Dizem</h2>
@@ -247,7 +245,6 @@
         </div>
     </section>
 
-    <!-- Chamada para Ação -->
     <section class="chamada-acao">
         <div class="container">
             <div class="chamada-content">
@@ -264,7 +261,6 @@
         </div>
     </section>
 
-    <!-- Seção Contato -->
     <section id="contato" class="contato">
         <div class="container">
             <h2 class="section-title">Entre em Contato</h2>
@@ -357,7 +353,7 @@
                         </div>
                         <div class="info-content">
                             <h4>E-mail Corporativo</h4>
-                            <p><a href="mailto:contato@wbassessoria.com.br" class="email-link">contato@wbassessoria.com.br</a></p>
+                            <p><a href="mailto:wbassessoria.contato@gmail.com" class="email-link">wbassessoria.contato@gmail.com</a></p>
                             <p class="info-details">Resposta em até 24h úteis<br>Para consultas formais</p>
                         </div>
                     </div>
@@ -387,7 +383,6 @@
                 </div>
             </div>
 
-            <!-- Mapa Interativo -->
             <div class="mapa-container">
                 <h3 class="map-title">
                     <i class="fas fa-map-marked-alt"></i> Nossa Localização em São Paulo
@@ -398,7 +393,6 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -427,7 +421,7 @@
                     <h4>Contato Direto</h4>
                     <div class="footer-contact">
                         <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5511914258886" target="_blank">(11) 91425-8886</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:contato@wbassessoria.com.br">contato@wbassessoria.com.br</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:wbassessoria.contato@gmail.com">wbassessoria.contato@gmail.com</a></p>
                         <p><i class="fas fa-clock"></i> Segunda a Sexta: 8h às 18h</p>
                     </div>
                 </div>
@@ -444,13 +438,12 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 WB Assessoria Migratória. Todos os direitos reservados. | 
+                <p>© 2025 WB Assessoria Migratória. Todos os direitos reservados. | 
                    <a href="https://www.linkedin.com/in/gustavo-costa-oliveira-4473b620a/" style="color: var(--text-dark);" target="_blank">Desenvolvido por Gustavo Costa Oliveira</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">
         <a href="https://wa.me/5511914258886?text=Olá! Gostaria de mais informações sobre a WB Assessoria Migratória" 
            target="_blank" rel="noopener noreferrer">
@@ -460,13 +453,10 @@
         </a>
     </div>
 
-    <!-- Scripts -->
-    <!-- Leaflet JavaScript para o Mapa -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
             crossorigin=""></script>
     
-    <!-- JavaScript Principal -->
     <script src="script.js"></script>
     
 </body>
