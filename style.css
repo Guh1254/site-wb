@@ -77,7 +77,8 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0.5rem 5%;
+    height: 110px; /* Altura fixa para evitar pulos */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1914,6 +1915,32 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .logo-img {
+        height: 60px; /* Volta ao tamanho normal no mobile */
+        width: 60px;
+    }
+    
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .language-selector {
+        order: 2; /* Coloca depois da logo */
+        margin: 0 15px;
+    }
+    
+    .hamburger {
+        order: 3;
+    }
+    
+    .nav-menu {
+        order: 4;
+        width: 100%;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
@@ -2127,19 +2154,20 @@ html {
 
 /* === ESTILOS DA LOGO NO HEADER === */
 
+.logo-img {
+    height: 90px; /* Aumentado de 60px para 90px */
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold-primary); /* Borda dourada para destaque */
+    transition: transform 0.3s ease;
+}
+
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    gap: 12px; /* Espaçamento entre a logo e o texto */
-}
-
-.logo-img {
-    height: 60px;
-    width: 60px; 
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    gap: 15px;
 }
 
 .logo-link:hover .logo-img {
