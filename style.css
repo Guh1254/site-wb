@@ -2187,3 +2187,66 @@ html {
     font-size: inherit; /* Faz o h2 antigo herdar o tamanho do novo estilo */
     margin: 0;
 }
+
+/* === ESTILIZAÇÃO DO GOOGLE TRADUTOR === */
+.language-selector {
+    margin-left: auto;
+    margin-right: 20px;
+    z-index: 1001; /* Ficar acima de outros elementos */
+}
+
+/* Esconde a barra azul do topo do Google */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+} 
+body {
+    top: 0px !important; 
+}
+
+/* Customiza o container do botão */
+.goog-te-gadget {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 0 !important; /* Esconde o texto "Powered by Google" */
+    color: transparent !important;
+}
+
+/* Customiza o Dropdown simples */
+.goog-te-gadget-simple {
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    border: 1px solid var(--gold-primary) !important;
+    padding: 8px 12px !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.goog-te-gadget-simple:hover {
+    background: rgba(212, 175, 55, 0.1) !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Link dentro do dropdown (texto do idioma selecionado) */
+.goog-te-gadget-simple a {
+    color: var(--gold-primary) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+.goog-te-gadget-simple img {
+    display: none !important; /* Remove o ícone do Google */
+}
+
+.goog-te-gadget-simple span {
+    color: var(--gold-primary) !important; /* Cor do texto */
+}
+
+/* Ajuste Mobile */
+@media (max-width: 768px) {
+    .language-selector {
+        margin: 10px auto;
+        order: 2;
+    }
+}
