@@ -107,7 +107,7 @@ function initMap() {
                                border-radius: 10px; border: 1px solid rgba(37, 211, 102, 0.3);">
                         <p style="margin: 0; font-size: 0.92rem; color: #E0E0E0; font-weight: 500;">
                             <i class="fas fa-clock" style="color: #25D366; margin-right: 0.6rem;"></i>
-                            Atendimento: Segunda a Sexta, 8h às 18h
+                            Atendimento: Segunda a Sexta, 9h às 18h
                         </p>
                     </div>
                     
@@ -580,8 +580,33 @@ ${data.mensagem}
             console.log('📝 Dados do formulário coletados:', data);
             console.log('📱 Mensagem para WhatsApp:', whatsappMessage);
             
-            // Simular delay de processamento (substituir por API real)
-            await simulateApiCall(2500);
+// === ENVIO PARA PLANILHA GOOGLE ===
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbzyx2m6le2Hf2z1KbeaszPQeXqZcCa7cBPBm5xPpsv78IIcMK57-W-pGsZL1E9Q0gCQ/exec'; 
+
+            const dadosPlanilha = {
+                'Data': new Date().toLocaleString('pt-BR'),
+                'Nome': data.nome,
+                'Email': data.email,
+                'WhatsApp': data.whatsapp,
+                'Telefone': data.telefone || 'Não informado',
+                'Serviço': servicoTexto,
+                'Mensagem': data.mensagem
+            };
+
+            try {
+                await fetch(scriptUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(dadosPlanilha),
+                });
+                console.log('✅ Dados enviados para a planilha!');
+            } catch (error) {
+                console.error('⚠️ Erro planilha:', error);
+            }
+
+            // Delay curto só para a animação do botão não travar bruscamente
+            await simulateApiCall(1000);
             
             // Mensagem de sucesso personalizada
             const successMessage = `🎉 *Obrigado, ${nomeFormatado}!*
@@ -590,7 +615,7 @@ ${data.mensagem}
 
 📲 Nossa equipe entrará em contato pelo WhatsApp (${data.whatsapp}) em até *24 horas úteis*.
 
-⏰ Horário de atendimento: Segunda a Sexta, 8h às 18h.
+⏰ Horário de atendimento: Segunda a Sexta, 9h às 18h.
 
 💡 Dica: Salve nosso número (11) 91425-8886 para facilitar o contato!`;
 
